@@ -5,6 +5,7 @@ configure :test do
     database: 'chatbot_test',
     pool: 5,
     username: 'postgres',
+    password: ENV['DB_PASSWORD'],
     host: 'postgres'
   }
 end
@@ -16,6 +17,7 @@ configure :development do
     database: 'chatbot_development',
     pool: 5,
     username: 'postgres',
+    password: ENV['DB_PASSWORD'],
     host: 'postgres'
   }
 end
@@ -27,6 +29,7 @@ configure :production do
     database: 'chatbot_production',
     pool: 5,
     username: 'postgres',
+    password: ENV['DB_PASSWORD'],
     host: 'postgres'
   }
 end
