@@ -10,7 +10,7 @@ describe FaqModule::RemoveService do
 
       it 'Return success message' do
         response = @removeService.call()
-        expect(reponse).to match("Deletado com sucesso")
+        expect(response).to match("Deletado com sucesso")
       end
 
       it 'Remove Faq from database' do

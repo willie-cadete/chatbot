@@ -12,7 +12,7 @@ describe FaqModule::CreateService do
       it 'will receive a error' do
         @createService = FaqModule::CreateService.new({"question" => @question, "answer" => @answer})
         response = @createService.call()
-        expect(response).to match("Hashtag Obrigatório")
+        expect(response).to match("Hashtag Obrigatória")
       end  
     end
 
@@ -28,7 +28,7 @@ describe FaqModule::CreateService do
 
       it 'Question and answer is present in database' do
         expect(Faq.last.question).to match(@question)
-        expect(Faq.last_answer).to match(@answer)
+        expect(Faq.last.answer).to match(@answer)
       end
 
       it 'Hashtags are created' do
