@@ -21,7 +21,7 @@ class App < Sinatra::Base
 
     content_type :json, charset: 'utf-8'
     {
-      "fulfillmentMessages": response,
+      "fulfillment": response,
       "payload": {
         "telegram": {
           "text": response,
