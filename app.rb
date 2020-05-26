@@ -11,7 +11,7 @@ Dir["./app/services/**/*.rb"].each {|file| require file }
 class App < Sinatra::Base
   post '/webhook' do
     request.body.rewind
-    result = JSON.parse(request.body.read)["result"]
+    result = JSON.parse(request.body.read)["queryResult"]
 
     if result["contexts"].present?
       response = InterpretService.call(result['action'], result['contexts'][0]['parameters'])
@@ -21,7 +21,7 @@ class App < Sinatra::Base
 
     content_type :json, charset: 'utf-8'
     {
-      "fulfillment": response,
+      "fulfillmentText": response,
       "payload": {
         "telegram": {
           "text": response,
