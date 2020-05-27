@@ -20,7 +20,7 @@
 - Integrated with Telegram
 - The commands are interpreted by Dialogflow
 
-The chatbot is a webhook app made in Ruby using Sinatra Framework to receive the requests from Dialogflow
+The chatbot is a webhook app made in Ruby using Sinatra Framework to receive the requests from [Dialogflow](https://dialogflow.com/)
 
 ## Prerequisites
 
@@ -61,6 +61,6 @@ $ rackup config.ru -o 0.0.0.0
 
 ## Interacting with the Chatbot
 
-You must use the Telegram app or the web application https://web.telegram.org/
+You must use the Telegram app or the web application [telegram-web](https://web.telegram.org/)
 
-search for @wcl-chatbot and click on "sStart button"
+search for @wcl-chatbot and click on "Start button"
