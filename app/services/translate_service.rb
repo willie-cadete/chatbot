@@ -2,10 +2,10 @@ require 'rest-client'
 require 'json'
 
 class TranslateService
-  def initialize(text, lang='pt-en')
+  def initialize(params, lang='pt-en')
     @api_url = ENV['YANDEX_API_URL']
     @api_key = ENV['YANDEX_API_KEY']
-    @text = text
+    @text = params['text']
     @lang = lang
   end
 
