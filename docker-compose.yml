@@ -19,6 +19,8 @@ services:
     environment:
       - LANG=C.UTF-8
       - DB_PASSWORD=postgres
+      - YANDEX_API_KEY
+      - YANDEX_API_URL
    
 volumes:
   postgres:
