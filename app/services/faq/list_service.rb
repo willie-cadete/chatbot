@@ -23,9 +23,9 @@ module FaqModule
       faqs.each do |f|
         response += "*#{f.id}* - "
         response += "*#{f.question}*\n"
-        response += "`#{f.answer}]` \n"
+        response += "`#{f.answer}` \n"
         f.hashtags.each do |h|
-          response += "_##{h.name}_"
+          response += "_##{h.name}_, "
         end
         response += "\n\n"
       end
