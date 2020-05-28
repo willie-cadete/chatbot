@@ -11,7 +11,7 @@ class TranslateService
 
   def call
     begin
-      url = "#{@api_url}?key=#{@api_key}&text=#{@text}&lang=#{@lang}"
+      url = URI.encode("#{@api_url}?key=#{@api_key}&text=#{@text}&lang=#{@lang}")
       response = RestClient.get(url)
       JSON.parse(response.body)['text'][0]
     rescue RestClient::ExceptionWithResponse => e
