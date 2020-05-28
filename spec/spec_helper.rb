@@ -2,6 +2,7 @@ require 'rspec'
 require 'rack/test'
 require 'ffaker'
 require 'pg_search'
+require 'rest-client'
 require_relative '../app.rb'
 
 Dir['./spec/support/**/*.rb'].each { |file| require file }
